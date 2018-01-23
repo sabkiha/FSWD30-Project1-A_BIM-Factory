@@ -1,6 +1,6 @@
 * {box-sizing: border-box}
 body {width:100%; font-family: Verdana, sans-serif; margin-bottom:0px;}
-.mySlides {display: none;}
+.mySlides {display: none; height: 100%;}
 img {vertical-align: middle;}
 
 /* Slideshow container */
@@ -8,6 +8,7 @@ img {vertical-align: middle;}
   max-width: 100%;
   position: relative;
   margin: auto;
+  background-color:darkgrey;
 }
 
 /* Next & previous buttons */
@@ -35,6 +36,7 @@ img {vertical-align: middle;}
 .text {
   color:darkgrey;
   font-size: 50px;
+  margin-bottom:20px;
   padding:5px 12px;
   position: absolute;
   bottom: 8px;
