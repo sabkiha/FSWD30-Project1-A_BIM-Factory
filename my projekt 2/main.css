@@ -15,7 +15,7 @@ a, a:visited {
 html, body {
   
   font-size: 100%;
-  background: #e2e5eb;
+  background: white;
 }
 
 .container {
@@ -75,19 +75,9 @@ html, body {
   background-size: cover;
   background-position: center center;
 }
-.container .blog-posts .post .image .time {
-  background: rgba(255, 255, 255, 0.5);
-  width: 50px;
-  text-align: center;
-  padding: 0.5em 0;
-  color: #444;
-}
-.container .blog-posts .post .image .time .date {
-  font-weight: bolder;
-}
-.container .blog-posts .post .image .time .month {
-  font-size: 0.7rem;
-}
+
+
+
 .container .blog-posts .post .content {
   padding: 0.5em 1em;
   width: 50%;
@@ -113,11 +103,13 @@ html, body {
   box-shadow: -1px 0 2px -1px rgba(0, 0, 0, 0.1);
 }
 .container .blog-posts .post .content h1 {
-  font-weight: 600;
+  font-weight: 400;
+  font-size: 25px;
   line-height: 2;
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
+  color: #0066ff;
 }
 .container .blog-posts .post .content p {
   font-weight: 300;
@@ -127,9 +119,10 @@ html, body {
   
 }
 .container .blog-posts .post .content .meta .icon-comment {
-  font-size: 0.7em;
+  font-size: 1em;
   line-height: 2;
   margin-top: auto;
+  color: green;
 }
 
 [class^="icon-"]:before {
@@ -158,6 +151,7 @@ img {
 
   .image {
     width: 30% !important;
+
   }
 
   h1 {
@@ -176,4 +170,14 @@ img {
 
 .cf:after {
   clear: both;
+}
+
+.business-header {
+  height: 50vh;
+  min-height: 300px;
+  background: url(img/img1.jpg) center center no-repeat scroll;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  background-size: cover;
+  -o-background-size: cover;
 }
