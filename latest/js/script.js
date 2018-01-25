@@ -1,15 +1,14 @@
 const nav = document.getElementById("nav");
-let state = "about";
-let initialized = false;
 const hero = document.getElementById("hero");
-const elements = document.querySelectorAll('.section');
+const elements = document.querySelectorAll('[data-section]');
+const courses = document.getElementById('section-courses');
+let state = "about";
 let images = [];
 
 function initialize() {
-	setTimeout(() => hero.classList.remove("fade-in"), 500);
-	setTimeout(() => initialized = true, 500);
-	location.hash = "#about"
+	location.hash = "#about";
 	preloadImages();
+	setTimeout(() => hero.classList.remove("fade-in"), 500);
 }
 
 function preloadImages() {
@@ -20,8 +19,20 @@ function preloadImages() {
 	})
 }
 
-function toggleNav() {
+function handleResize() {
+	if (window.innerWidth > 1170) navClose();
+}
+
+function navToggle() {
 	nav.classList.toggle("nav-open");
+}
+
+function navOpen() {
+	nav.classList.add("nav-open");
+}
+
+function navClose() {
+	nav.classList.remove("nav-open");
 }
 
 function changeState(to) {
@@ -34,16 +45,24 @@ function changeHero(image) {
 }
 
 function changeSection(section) {
-
+	navClose();
 	changeHero(section);
+	setTimeout(() => window.scroll(0, 0), 500);
+
 	if (section == "courses") {
-		setTimeout(() => hero.classList.add("hero-big"), 500);
+		setTimeout(() => {
+			hero.classList.add("hidden");
+			hero.classList.remove("fade-in");
+		}, 500);
 	} else {
-		setTimeout(() => hero.classList.remove("hero-big"), 500);
+		setTimeout(() => { 
+			hero.classList.remove("hidden");
+			hero.classList.add("fade-in");
+		}, 500);
 	}
 
 	elements.forEach(element => {
-		if (element.id != `section-${section}`) {
+		if (element.dataset.section != section) {
 			element.classList.add("fade-out");
 			setTimeout(() => element.classList.add("hidden"), 500);
 			setTimeout(() => element.classList.remove("fade-out"), 500);
@@ -56,7 +75,9 @@ function changeSection(section) {
 	setTimeout(() => hero.classList.remove("fade-next"), 500);
 }
 
-document.getElementById("logo").addEventListener("click", toggleNav);
+document.getElementById("logo").addEventListener("click", navToggle);
 document.addEventListener("load", () => init);
 window.addEventListener("hashchange", changeState);
+window.addEventListener('resize', handleResize);
 window.onload = initialize();
+
