@@ -1,38 +1,43 @@
 const News = [
 	{
 		title: "Save tons of time and money by managing your information",
-		text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc pulvinar elementum nunc, vel feugiat lacus luctus sed. Mauris non sem in risus luctus efficitur id at libero.",
+		text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc pulvinar elementum nunc, vel feugiat lacus luctus sed.",
 		img: "img/news/0.jpg"
 	},
 	{
 		title: "All the tools you need and will learn how to use",
-		text: "",
+		text: "Fusce arcu libero, fringilla varius magna at, vehicula placerat erat. Nulla tincidunt congue arcu, vitae faucibus augue blandit non.",
 		img: "img/news/1.jpg"
 	},
 	{
 		title: "Impress your clients with amazing digital models.",
-		text: "",
+		text: "Aliquam vitae enim at metus laoreet varius vel sit amet ante. Sed rhoncus lacus quis mi fringilla, in commodo purus mollis. Curabitur in viverra nisi, non finibus quam.",
 		img: "img/news/2.jpg"
 	},
 	{
 		title: "The story of our unique partnership to support training in the construction industry",
-		text: "",
+		text: "Proin eget turpis eu libero suscipit lacinia et eu leo. Phasellus nunc est, interdum sed tempus at, vehicula vitae augue.",
 		img: "img/news/3.jpg"
 	},
 	{
 		title: "Tips and tricks in getting to grips with BIM",
-		text: "",
+		text: "Morbi convallis, mi ac malesuada scelerisque, purus velit pellentesque lectus, eget suscipit nisl ipsum id diam. Nulla eget velit sodales, ultricies metus at, placerat mi.",
 		img: "img/news/4.jpg"
 	},
 	{
 		title: "Case study: How BIM has freed up creative energies of my team",
-		text: "",
+		text: "Pellentesque convallis orci efficitur, eleifend orci ut, eleifend urna. Nulla quis velit quis nisl lacinia scelerisque. Nunc sit amet finibus risus.",
 		img: "img/news/5.jpg"
 	},
 	{
 		title: "In-depth interview with our CEO Theresa May",
-		text: "",
+		text: "Vivamus eu dapibus erat. Vivamus ac lorem venenatis, molestie quam ac, dictum magna. Cras accumsan tristique diam, vel pellentesque dui laoreet eget.",
 		img: "img/news/6.jpg"
+	},
+	{
+		title: "Non-proprietary or openBIM standards",
+		text: "Praesent sed nibh et augue pulvinar pharetra at eu ipsum. Pellentesque fermentum, libero vel convallis ornare, risus mauris mattis nibh.",
+		img: "img/news/7.jpg"
 	}
 ];
 
