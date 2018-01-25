@@ -377,6 +377,25 @@ nav {
 
 }
 
+.contact-wrap {
+	position: relative;
+}
+
+.contact-info {
+	position: absolute;
+	bottom: 0;
+	right: 8px;
+	background: #fff;
+	padding: 16px;
+	width: 500px;
+	margin: 16px auto;
+	font-size: 22px;
+	display: flex;
+	flex-flow: column;
+	justify-content: center;
+	border: 1px solid #ddd;
+}
+
 /* main and sections end */
 .main {
 	min-height: 100%;

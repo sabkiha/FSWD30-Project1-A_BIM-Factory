@@ -59,7 +59,7 @@ function initialize() {
 function preloadImages() {
 	elements.forEach(el => {
 		const image = new Image();
-		image.src = `img/${el.id.substr(8)}.jpg`;
+		if (el.dataset.section != "news") image.src = `img/${el.id.substr(8)}.jpg`;
 		images.push(image);
 	})
 }
