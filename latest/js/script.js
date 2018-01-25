@@ -41,12 +41,14 @@ const News = [
 	}
 ];
 
+const popup = document.getElementById('popup');
 const nav = document.getElementById("nav");
 const hero = document.getElementById("hero");
 const elements = document.querySelectorAll('[data-section]');
 const courses = document.getElementById('section-courses');
 const news = document.getElementById('news-content');
 let state = "about";
+let newsDocs;
 let images = [];
 
 function initialize() {
@@ -72,7 +74,7 @@ function populateNews() {
 		let title = document.createElement('div');
 		let text = document.createElement('div');
 
-		li.className = "box-news";
+		li.className = "box-news news-click";
 		img.className = "box-news-img";
 		info.className = "box-news-info";
 		title.className = "box-news-title";
@@ -88,6 +90,14 @@ function populateNews() {
 		li.appendChild(info);
 		news.appendChild(li);
 	});
+	newsDocs = document.querySelectorAll('.news-click');
+
+	newsDocs.forEach(doc => doc.addEventListener('click', () => togglePopup()));
+}
+
+function togglePopup() {
+	document.body.classList.toggle('overflow');
+	popup.classList.toggle('hidden');
 }
 
 function handleResize() {
@@ -112,7 +122,7 @@ function changeState(to) {
 }
 
 function changeHero(image) {
-	setTimeout(() => hero.style.backgroundImage = `url('img/${image}.jpg')`, 500);
+	if (state != "news") setTimeout(() => hero.style.backgroundImage = `url('img/${image}.jpg')`, 500);
 }
 
 function changeSection(section) {
