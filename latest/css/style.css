@@ -432,6 +432,9 @@ nav {
 		height: 80px;
 		width: 80px;
 	}
+	.box {
+		min-height: 300px;
+	}
 }
 
 @media (max-width:1509px) {
