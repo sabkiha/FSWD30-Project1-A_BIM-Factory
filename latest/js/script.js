@@ -1,13 +1,53 @@
+const News = [
+	{
+		title: "Save tons of time and money by managing your information",
+		text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc pulvinar elementum nunc, vel feugiat lacus luctus sed. Mauris non sem in risus luctus efficitur id at libero.",
+		img: "img/news/0.jpg"
+	},
+	{
+		title: "All the tools you need and will learn how to use",
+		text: "",
+		img: "img/news/1.jpg"
+	},
+	{
+		title: "Impress your clients with amazing digital models.",
+		text: "",
+		img: "img/news/2.jpg"
+	},
+	{
+		title: "The story of our unique partnership to support training in the construction industry",
+		text: "",
+		img: "img/news/3.jpg"
+	},
+	{
+		title: "Tips and tricks in getting to grips with BIM",
+		text: "",
+		img: "img/news/4.jpg"
+	},
+	{
+		title: "Case study: How BIM has freed up creative energies of my team",
+		text: "",
+		img: "img/news/5.jpg"
+	},
+	{
+		title: "In-depth interview with our CEO Theresa May",
+		text: "",
+		img: "img/news/6.jpg"
+	}
+];
+
 const nav = document.getElementById("nav");
 const hero = document.getElementById("hero");
 const elements = document.querySelectorAll('[data-section]');
 const courses = document.getElementById('section-courses');
+const news = document.getElementById('news-content');
 let state = "about";
 let images = [];
 
 function initialize() {
 	location.hash = "#about";
 	preloadImages();
+	populateNews();
 	setTimeout(() => hero.classList.remove("fade-in"), 500);
 }
 
@@ -17,6 +57,32 @@ function preloadImages() {
 		image.src = `img/${el.id.substr(8)}.jpg`;
 		images.push(image);
 	})
+}
+
+function populateNews() {
+	News.forEach(doc => {
+		let li = document.createElement('li');
+		let img = document.createElement('div');
+		let info = document.createElement('div');
+		let title = document.createElement('div');
+		let text = document.createElement('div');
+
+		li.className = "box-news";
+		img.className = "box-news-img";
+		info.className = "box-news-info";
+		title.className = "box-news-title";
+		text.className = "box-news-text";
+
+		title.textContent = doc.title;
+		text.textContent = doc.text;
+		img.style.backgroundImage = `url('${doc.img}'`;
+
+		info.appendChild(title);
+		info.appendChild(text);
+		li.appendChild(img);
+		li.appendChild(info);
+		news.appendChild(li);
+	});
 }
 
 function handleResize() {
@@ -49,7 +115,7 @@ function changeSection(section) {
 	changeHero(section);
 	setTimeout(() => window.scroll(0, 0), 500);
 
-	if (section == "courses") {
+	if (section == "courses" || section == "news" || section == "contact") {
 		setTimeout(() => {
 			hero.classList.add("hidden");
 			hero.classList.remove("fade-in");
