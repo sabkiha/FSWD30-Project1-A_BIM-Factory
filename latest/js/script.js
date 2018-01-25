@@ -60,10 +60,16 @@ function initialize() {
 
 function preloadImages() {
 	elements.forEach(el => {
-		const image = new Image();
+		let image = new Image();
 		if (el.dataset.section != "news") image.src = `img/${el.id.substr(8)}.jpg`;
 		images.push(image);
 	})
+
+	for (let i = 0; i < 0; i++) {
+		let image = new Image();
+		img.src = `img/news/${i}.jpg`;
+		images.push(image);
+	}
 }
 
 function populateNews() {
