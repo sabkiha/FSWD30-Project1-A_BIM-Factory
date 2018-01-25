@@ -16,6 +16,8 @@ html, body {
   
   font-size: 100%;
   background: white;
+  margin-bottom: 0px;
+  padding-bottom: 0px;
 }
 
 .container {
@@ -23,6 +25,9 @@ html, body {
   max-width: calc(1400px + 1em);
   margin: 0 auto;
   overflow: hidden;
+  margin-top: 20px;
+  margin-bottom: 0px;
+  padding-bottom: 0px;
 }
 .container .blog-posts .featured {
   width: 100% !important;
@@ -109,20 +114,23 @@ html, body {
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
-  color: #0066ff;
+  color: #3D92F9;
+  font-family: 'Montserrat', sans-serif;
 }
 .container .blog-posts .post .content p {
   font-weight: 300;
   font-size: 0.7rem;
   line-height: 1.5;
   margin-bottom: 0.5em;
+  font-family: 'Montserrat', sans-serif;
   
 }
 .container .blog-posts .post .content .meta .icon-comment {
   font-size: 1em;
   line-height: 2;
   margin-top: auto;
-  color: green;
+  color: #999;
+  font-family: 'Montserrat', sans-serif;
 }
 
 [class^="icon-"]:before {
